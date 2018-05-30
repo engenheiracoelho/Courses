@@ -1,0 +1,3 @@
+S = 'Neps Academy'
+
+print(S)
