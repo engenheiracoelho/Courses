@@ -1,3 +1,10 @@
+/* Hello World program.
+*  C++ course - Udemy
+* 
+*  By Leticia Coelho
+*
+*/
+
 #include <iostream>
 
 using namespace std;
