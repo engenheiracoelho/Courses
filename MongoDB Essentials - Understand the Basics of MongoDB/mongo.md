@@ -7,11 +7,18 @@ Using Python3.6 on Windows, access the following links on the section 'Courses' 
 
 ## Start
 * Using two CMD prompt command on Windows.
+```
 CDM1 >> cd "Program files(x86)/MongoDB/server/3.2/bin".
+```
+```
 CDM2 >> cd "Program files(x86)/MongoDB/server/3.2/bin".
+```
+```
 CMD1 >> mongod
+```
+```
 CMD2 >> mongo
-
+```
 
 ## Built With
 
