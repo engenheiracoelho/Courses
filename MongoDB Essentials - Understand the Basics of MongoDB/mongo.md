@@ -4,26 +4,26 @@
 ## Getting Started
 * When install, modify the folder of installation in the 'custom' option.
 ```
-C:\MongoDB
+C:\Program Files (x86)\MongoDB\server\3.6
 ```
 * Create the folder
 ```
-C:\MongoDB\data\db
+C:\Program Files (x86)\MongoDB\data
 ```
 ```
-C:\MongoDB\data\log\mongo.log
+C:\Program Files (x86)\MongoDB\data\log\mongo.log
 ```
 * Using two CMD prompt command on Windows.
 ```
-CDM1 >> cd "Program files(x86)/MongoDB/server/3.2/bin".
+CDM1 >> cd "Program files (x86)\MongoDB\server\3.6\bin"
 ```
 Start the services:
 ```
-.\mongod.exe --install --logpath c:\data\log --logappend --bind_ip 127.0.0.1 --dbpath c:\data\db --directoryperdb
+.\mongod.exe --install --logpath C:\Program Files (x86)\MongoDB\data\log --logappend --bind_ip 127.0.0.1 --dbpath C:\Program Files (x86)\MongoDB\data\db --directoryperdb
 ```
 Configure the data path:
 ```
-CDM1 >> echo dbpath=c:\data\db>> "mongod.cfg"
+CDM1 >> echo dbpath=C:\Program Files (x86)\MongoDB\data\>> "mongod.cfg"
 ```
 Configure the log path:
 ```
