@@ -16,3 +16,128 @@ show collections
 ```
 db.things.find()
 ```
+* Show information about the things in collection. But with an easier format.
+```
+db.article.find().pretty()
+```
+* Use created database example
+```
+use name_example
+```
+* Create a database
+```
+db.createCollection("NewCollection_name")
+```
+* Insert new document (Collection name : car).
+
+*You don't need to create an ID attribute*
+
+```
+db.car.insert({
+  name: 'honda',
+  make: 'accord',
+  year: '2010',
+});
+```
+
+* Modify a document, modify an atributte.
+
+```
+db.car.update({
+  name: 'honda'},
+  {$set: {
+    name: 'ford'
+  }
+});
+```
+
+* Modify a document, insert an atributte.
+
+```
+db.car.update({
+  name: 'ford'},
+  {$set: {
+    transmission: 'automatic'
+  }
+},{$upsert:true});
+```
+* Remove a document.
+```
+db.car.remove({})
+```
+
+* Remove a specific document.
+```
+db.car.remove({name: "ford"})
+```
+
+* MongoDB is based on JavaScript. Insert ten documents in a collection.
+```
+for(var i=0; i<10; i++)(db.things.insert(("x":i)))
+```
+
+## Types of data
+
+Data types available to use : *String*,*Number*,*Date*,*Array*,*Boolean* and *ObjectId*.
+
+* *String :*
+```
+{
+  name:"John"
+}
+```
+
+* *Number :*
+```
+{
+  likes:5
+}
+```
+
+* *Date :*
+```
+{
+  timeStamp: ISODate("...")
+}
+```
+
+* *Array :*
+```
+{
+  OR
+  tags[]
+  {
+    tags:["tag1","tag2"]
+  }
+}
+```
+
+* *Boolean :*
+```
+{
+  published:true
+}
+```
+
+* *ObjectId :*
+```
+{
+  _creator:"4811588"
+}
+```
+* *Buffer :* Used for video, images and audio.
+
+* *Mixed :* Combines different types.
+
+## Query
+
+* Find metody.
+
+*Sort:* Used for select a specific attribute;
+
+*limit:* Used for limit the search.
+```
+{
+  db.student.find({}).sort({'name':'Leticia'}).limit(2)
+}
+```
