@@ -20,11 +20,20 @@ db.things.find()
 ```
 db.article.find().pretty()
 ```
+* Create database
+```
+use name_example
+```
+* Delete database
+```
+use Database_name
+db.dropDatabase();
+```
 * Use created database example
 ```
 use name_example
 ```
-* Create a database
+* Create a collection
 ```
 db.createCollection("NewCollection_name")
 ```
@@ -104,11 +113,10 @@ Data types available to use : *String*,*Number*,*Date*,*Array*,*Boolean* and *Ob
 * *Array :*
 ```
 {
-  OR
-  tags[]
-  {
-    tags:["tag1","tag2"]
-  }
+  "array_name" : [
+    "value1",
+    "value2",
+  ]
 }
 ```
 
