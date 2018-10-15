@@ -17,6 +17,16 @@ create table table_name(name1 INT, name2 VARCHAR(45));
 INSERT INTO table_name values (10,'varchar');
 ```
 
+* Show tables
+```
+.table
+```
+
+* Desc table
+``` 
+PRAGMA table_info([table_name]);
+``` 
+
 ## Install 
 
 On ubuntu:
